@@ -2,19 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400&family=Poppins:wght@100&display=swap');
 
-body{
+body,
+ul,
+li,
+p{
     margin: 0;
     padding: 0;
     font-family:'Assistant', sans-serif;
     color: #1E1E2A;
+    list-style: none;
+    font-size: 1.2rem;
 }
+
 
 /* HEADER */
 
 .header-container{
     height: 100vh;
     width: 100vw;
-    background-color: #8ACBD1;
+    background-color: #F5CF2A;
     /* background-image: url(img/lucas_oliveira2.png); */
     background-repeat: no-repeat;
     background-position: center;
@@ -45,6 +51,7 @@ h2{
 .social-media{
     margin-top: 1rem;
     display: flex;
+    background-color: #EDE028;
 }
 
 .social-media a{
@@ -155,6 +162,10 @@ a:hover{
     letter-spacing: 4px;
     font-size: 45px;
 }
+.menu-itens ul li a:hover{
+    color: #F5CF2A;
+    
+}
 
 /* animação menu */
 
@@ -200,41 +211,17 @@ a:hover{
     margin: 3rem 0;
 }
 
-.card-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 90%;
-}
-
-.card{
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
-    margin: 3rem 0 0 0;
-    display: flex;
-    align-items: center;
+.container h2{
+    font-size: 45px;
     justify-content: center;
-    background-color: #8ACBD1;
-    background-image: url(img/lucas_oliveira2.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: grayscale(0.70);
-    cursor: pointer;
-    color: #1E1E2A;
-    transition: 0.5s ease-in-out;
-}
-
-.card-text{
-    
-    width: 40%;
-    letter-spacing: 1px;
-    color: rgb(109, 109, 109);
+    align-items: center;
+    display: flex;
     transition: .5s ease-in-out;
 }
 
-.card-wrapper{
+/* projects */
+
+.project-text{
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -243,19 +230,37 @@ a:hover{
     position: relative;
 }
 
-.card-wrapper::before {
+.project-text::before {
     content: '' ;
     position: absolute;
     height: 100px;
     width: 100px;
-    border-radius: 50%;
+    
     display: block;
     border: 1px solid #ffffff;
     opacity: 0;
     transition: 0.5s ease-in-out;
 }
 
-.card-wrapper h2{
+.project{
+    width: 300px;
+    height: 230px;
+    border-radius: 100%;
+    display: flex;
+    background-color: #F5CF2A;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0 0 0;
+    cursor: pointer;
+    
+    
+}
+
+
+.project-text h2{
     font-size: 40px;
     text-transform:uppercase ;
     letter-spacing: 4px;
@@ -263,7 +268,7 @@ a:hover{
     transition: .5s ease-in-out;
 }
 
-.card-wrapper p{
+.project-text p{
     font-size: 0;
     visibility: visible;
     opacity: 0;
@@ -272,24 +277,54 @@ a:hover{
     transition: .5s ease-in-out;
 }
 
-.card:hover {
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .flex > div {
+    flex: 1 1 200px;
+    margin: 10px;
+  }
+  .flex .project  {
+      
+      filter: grayscale(0.70);
+     }
+
+/* project animation */
+
+.project:hover{
     filter: unset;
-
+    border-radius: 10%;
+    transition: .5s ease-in-out;
 }
-
-.card:hover > .card-wrapper::before {
-    height: 270px;
-    width: 270px;
+.project:hover > .project-text::before {
+    height: 220px;
+    width: 230px;
     opacity: 1;
+    border-radius:10% ;
 }
 
-.card:hover > .card-wrapper p{
+.project:hover > .project-text p{
     opacity: 1;
     visibility: visible;
     font-size: 14px;
 }
 
+/* about me */
 
+.about-container{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 3rem 0;
+
+}
 
 /* footer */
 
